@@ -6,7 +6,7 @@ import './App.css';
 
 export default function App() {
     const [total, setTotal] = useState('');
-    const [onof, setOnOff] = useState(true)
+    const [onof, setOnOff] = useState(false)
 
     const handleClick = (buttonName) => {
         if (onof) {
