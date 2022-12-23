@@ -6,7 +6,6 @@ export function calculate(valor, button) {
         }
     }
     else if (button === '=') {
-
         try {
             if (valor.indexOf('e') === 0 && valor.indexOf('^') === 1) {
                 var arr = valor.split('^')
