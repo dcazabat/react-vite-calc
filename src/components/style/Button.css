@@ -1,17 +1,15 @@
 button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 3em;
-    height: 3em;
-    font-weight: bold;
-    border: 3px solid black;
-    border-radius: 10px;
+    margin: 0.1em;
+    width: 2.8em;
+    height: 2.8em;
     cursor: pointer;
-    outline: none;
     transition: all .13s ease;
     font-size: 35px;
+}
+
+.flex-container button {
+    background-color: #fafafa;
+    color: black;
 }
 
 .flex-container.blue button {
@@ -25,17 +23,14 @@ button {
 }
 
 .flex-container.number button {
-    background-color: rgb(170, 168, 47);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 0);
+    color: rgb(0, 0, 0);
 }
 
 .flex-container.operator button {
     color: deepskyblue;
 }
 
-.button:hover {
-    background-color: lightgray;
-}
 
 .button:active {
     transform: scale(1.1);

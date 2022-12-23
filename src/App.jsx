@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Display from './components/Display';
 import ButtonPanel from './components/ButtonPanel';
-import './App.css';
-import './Toggle.css';
 import { calculate, factorial } from './logic/Calculate'
-import { useEffect } from 'react';
+import './App.css';
 
 export default function App() {
     const [total, setTotal] = useState('');
-    const [onof, setOnOff] = useState(false)
+    const [onof, setOnOff] = useState(true)
 
     const handleClick = (buttonName) => {
         if (onof) {
@@ -23,16 +21,19 @@ export default function App() {
         if (total != '') {
             setTotal('')
         }
-    },[onof])
+    }, [onof])
+
     return (
-        <div className='app'>
-            <div className="header">
-                <span className="calculator">
-                    Calculadora Cientifica
-                </span>
-                <div>
-                    <input class="tgl tgl-ios" id="cb2" type="checkbox" onClick={(e) => {setOnOff(!onof)}}/>
-                    <label class="tgl-btn" for="cb2"></label>
+        <div className='app container'>
+            <div className="row text-center align-items-center mt-3">
+                <div className="col-8 col-sm-9 pt-3">
+                    <h6 className="fw-bold text-warning">
+                        Calculadora Cientifica
+                    </h6>
+                </div>
+                <div className="col mx-3 pt-3 form-check form-switch form-check-reverse">
+                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckReverse" checked={onof} onClick={(e) => { setOnOff(!onof) }}/>
+                    <label className="form-check-label" htmlFor="flexSwitchCheckReverse"></label>
                 </div>
             </div>
 
